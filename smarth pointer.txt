@@ -24,3 +24,5 @@ int main() {
     // El objeto se libera automáticamente cuando el puntero sale del ámbito
     return 0;
 } // ptr se libera automáticamente aquí, llamando al destructor de MiClase
+
+
