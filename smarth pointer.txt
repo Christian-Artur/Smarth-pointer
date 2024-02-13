@@ -1,0 +1,26 @@
+#include <iostream>
+#include <memory>
+
+class MiClase {
+public:
+    MiClase() {
+        std::cout << "MiClase constructor llamado" << std::endl;
+    }
+    ~MiClase() {
+        std::cout << "MiClase destructor llamado" << std::endl;
+    }
+    void Hola() {
+        std::cout << "¡Hola desde MiClase!" << std::endl;
+    }
+};
+
+int main() {
+    // Crear un unique_ptr que posee un objeto de tipo MiClase
+    std::unique_ptr<MiClase> ptr(new MiClase());
+
+    // Utilizar el puntero
+    ptr->Hola();
+
+    // El objeto se libera automáticamente cuando el puntero sale del ámbito
+    return 0;
+} // ptr se libera automáticamente aquí, llamando al destructor de MiClase
